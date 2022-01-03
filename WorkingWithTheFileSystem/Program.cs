@@ -54,8 +54,8 @@ namespace WorkingWithTheFileSystem
                 File.Move(file, $"{destinationFolder}{ Path.GetFileName(file) }");
             }
 
-            var newFile = File.Create(newPath + "\\New Text Document1.txt");
-            using (StreamReader streamReader = new StreamReader(newPath + "\\New Text Document.txt"))
+            var newFile = File.Create(destinationFolder + "\\New Text Document1.txt");
+            using (StreamReader streamReader = new StreamReader(destinationFolder + "\\New Text Document.txt"))
             {
                 using (StreamWriter streamWriter = new StreamWriter(newFile))
                 {
